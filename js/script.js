@@ -10,6 +10,18 @@ function getComputerChoice() {
     return "scissors";
 }
 
-for (let i = 0; i < 10; ++i) {
-    console.log(getComputerChoice());
+function getHumanChoice() {
+    let choice = prompt("Type rock, paper, or scissors", "rock");
+    choice = choice.toLowerCase();
+    while (choice != "rock" && choice != "paper" && choice != "scissors") {
+        choice = prompt("Invalid choice. Type rock, paper or scissors", "rock");
+        choice = choice.toLowerCase();
+    }
+    return choice;
 }
+
+console.log(getHumanChoice());
+
+// for (let i = 0; i < 10; ++i) {
+//     console.log(getComputerChoice());
+// }
