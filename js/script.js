@@ -12,10 +12,14 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let choice = prompt("Type rock, paper, or scissors", "rock");
-    choice = choice.toLowerCase();
+    if (choice !== null) {
+        choice = choice.toLowerCase();
+    }
     while (choice != "rock" && choice != "paper" && choice != "scissors") {
         choice = prompt("Invalid choice. Type rock, paper or scissors", "rock");
-        choice = choice.toLowerCase();
+        if (choice !== null) {
+            choice = choice.toLowerCase();
+        }
     }
     return choice;
 }
